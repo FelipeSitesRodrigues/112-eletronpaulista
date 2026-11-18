@@ -1,0 +1,5 @@
+node_modules/
+revisao/
+scripts/.cache/
+dist/preview/
+lighthouse/

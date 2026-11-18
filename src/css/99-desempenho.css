@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------- desempenho
+   - js-abrindo: até a 1ª pintura, o que está abaixo do hero fica fora do layout, pra as fotos
+     dessas seções não disputarem a banda com o hero (memória do 079).
+   - content-visibility nas seções longe do topo: o navegador pula o desenho delas até chegar
+     perto. contain-intrinsic-size é só o conteúdo (sem padding), senão a âncora passa do alvo
+     (memória do 076). A seção vizinha do hero fica de fora (memória do 079). */
+.js-abrindo main > section:not(.hero) { display: none; }
+/* content-visibility ficou de fora: Loop e Wearables são alvo do menu (a âncora parava errado,
+   memória) e no rodapé ele fazia o Lighthouse medir o contraste sobre branco */

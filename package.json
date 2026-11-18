@@ -1,0 +1,20 @@
+{
+  "name": "0112-eletron-paulista",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site da Eletron Paulista (treinamento em eletrônica embarcada de máquinas agrícolas). HTML, CSS e JS estático.",
+  "scripts": {
+    "build": "node build.mjs",
+    "publicar": "node build.mjs --publicar",
+    "serve": "node scripts/serve.mjs 3412",
+    "imagens": "node scripts/processar-imagens.mjs"
+  },
+  "devDependencies": {
+    "@fontsource-variable/archivo": "^5.2.0",
+    "@phosphor-icons/core": "^2.1.1",
+    "cheerio": "^1.2.0",
+    "puppeteer-core": "^25.12.0",
+    "sharp": "^0.35.5"
+  }
+}

@@ -1,0 +1,35 @@
+/* ---------------------------------------------------------------- divisão entre seções
+   Igual ao 08-inter e ao portfólio (000): cada seção sobe por cima da anterior com os cantos de
+   cima arredondados (56 px no computador, 28 no celular) e ganha embaixo o espaço que a de
+   baixo cobre. A ordem de empilhamento segue a página. Altura moderada (memória: seções
+   baixas, ~72 px de respiro). */
+:root { --divisao: 3.5rem; --pad: clamp(4rem, 6vw, 5.5rem); }
+@media (max-width: 47.99em) { :root { --divisao: 1.75rem; --pad: 3.5rem; } }
+
+.secao { padding-block: var(--pad) calc(var(--pad) + var(--divisao)); }
+.prova, .treino, .sobre, .dominar, .programa, .turma, .invest, .duvidas, .perguntas, .inscricao, .rodape {
+  position: relative;
+  margin-top: calc(var(--divisao) * -1);
+  border-radius: var(--divisao) var(--divisao) 0 0;
+  overflow: clip;
+}
+.prova { z-index: 1; }
+.treino { z-index: 2; }
+.sobre { z-index: 3; }
+.dominar { z-index: 4; }
+.programa { z-index: 5; }
+.turma { z-index: 6; }
+.invest { z-index: 7; }
+.duvidas { z-index: 8; }
+.perguntas { z-index: 9; overflow: visible; }
+.inscricao { z-index: 10; }
+.rodape { z-index: 11; }
+
+.hero { padding-bottom: calc(6rem + var(--divisao)); }
+.prova { padding-bottom: calc(clamp(3rem, 5vw, 4.5rem) + var(--divisao)); }
+.sobre { padding-bottom: var(--divisao); }
+.sobre__caixa { padding-bottom: clamp(3.5rem, 6vw, 5rem); }
+.turma { padding-bottom: calc(var(--pad) + var(--divisao) + 2.5rem); }
+.programa { padding-bottom: calc(var(--pad) + var(--divisao) + 1.5rem); }
+@media (max-width: 63.99em) { .turma { padding-bottom: calc(var(--pad) + var(--divisao)); } }
+@media (max-width: 47.99em) { .hero { padding-bottom: calc(3rem + var(--divisao)); } }

@@ -1,0 +1,32 @@
+/* ---------------------------------------------------------------- 02 · faixa de prova
+   Logo abaixo do hero, branca, subindo por cima do vídeo com os cantos arredondados (99-divisoes).
+   Cinco números em linha, separados por fio, e a linha das marcas em texto (sem logo de fabricante). */
+.prova { background: var(--branco); padding-block: clamp(3rem, 5vw, 4.5rem); }
+.prova__numeros { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.prova__numeros li { display: grid; gap: .5rem; padding-inline: clamp(.75rem, 2vw, 2rem); text-align: center; }
+.prova__numeros li + li { border-left: 1px solid rgb(20 17 16 / .1); }
+.prova__numeros strong {
+  font: 600 clamp(1.625rem, 1rem + 1.6vw, 2.5rem)/1 var(--fonte-titulo);
+  font-stretch: 108%;
+  letter-spacing: -.01em;
+  color: var(--verde);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.prova__numeros li > span { font-size: .9375rem; color: var(--cinza); }
+.prova__marcas { margin-top: clamp(2.25rem, 4vw, 3rem); padding-top: clamp(1.75rem, 3vw, 2.25rem); border-top: 1px solid rgb(20 17 16 / .08); text-align: center; }
+.prova__lista { font: 600 clamp(.9375rem, .85rem + .3vw, 1.125rem)/1.6 var(--fonte-titulo); font-stretch: 108%; color: var(--preto); letter-spacing: .01em; }
+.prova__lista span { color: var(--amarelo); margin-inline: .5rem; font-weight: 800; }
+.prova__legenda { margin-top: .625rem; font-size: .9375rem; color: var(--cinza); }
+
+@media (max-width: 59.99em) {
+  .prova__numeros { grid-template-columns: repeat(6, minmax(0, 1fr)); row-gap: 2rem; }
+  .prova__numeros li { grid-column: span 2; }
+  .prova__numeros li:nth-child(4) { grid-column: 2 / span 2; }
+  .prova__numeros li + li { border-left: 0; }
+}
+@media (max-width: 29.99em) {
+  .prova__numeros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .prova__numeros li, .prova__numeros li:nth-child(4) { grid-column: auto; }
+  .prova__numeros li:last-child { grid-column: 1 / -1; }
+}

@@ -1,0 +1,39 @@
+/* ---------------------------------------------------------------- 10 · perguntas frequentes
+   Branca. Título à esquerda (fixo na tela no computador), acordeão nativo à direita. */
+.perguntas { background: var(--branco); }
+.perguntas__grade { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 2.5rem clamp(3rem, 7vw, 7rem); align-items: start; }
+.perguntas__grade > div:first-child { position: sticky; top: 8rem; }
+.perguntas__link { display: inline-flex; align-items: center; gap: .625rem; margin-top: 1.75rem; font: 600 1.0625rem/1 var(--fonte-titulo); color: var(--verde); }
+.perguntas__link .i { width: 1.375rem; height: 1.375rem; }
+.faq { display: grid; border-top: 1px solid rgb(20 17 16 / .1); }
+.faq__item { border-bottom: 1px solid rgb(20 17 16 / .1); }
+.faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  list-style: none;
+  cursor: pointer;
+  font: 600 clamp(1.0625rem, .98rem + .35vw, 1.3125rem)/1.3 var(--fonte-titulo);
+  font-stretch: 104%;
+  color: var(--preto);
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary .i {
+  flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: .5rem;
+  border-radius: 50%;
+  color: var(--verde);
+  background: var(--verde-claro);
+  transition: transform var(--dur) var(--ease), background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.faq__item[open] summary .i { transform: rotate(45deg); background: var(--verde); color: #fff; }
+.faq__item p { padding: 0 3.5rem 1.5rem 0; font-size: 1rem; line-height: 1.6; color: var(--cinza); }
+@media (max-width: 59.99em) {
+  .perguntas__grade { grid-template-columns: minmax(0, 1fr); }
+  .perguntas__grade > div:first-child { position: static; }
+  .faq__item p { padding-right: 0; }
+}

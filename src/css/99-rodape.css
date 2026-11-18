@@ -1,0 +1,21 @@
+/* ---------------------------------------------------------------- rodapé */
+.rodape { color: rgb(255 255 255 / .72); background: var(--preto); padding-block: clamp(3.5rem, 6vw, 5rem) 2rem; }
+.rodape__grade { display: grid; grid-template-columns: 1.4fr 1fr 1.4fr .9fr; gap: 2.5rem 3rem; }
+.rodape__logo, .rodape__logo img { width: 13rem; height: auto; }
+.rodape__marca p { margin-top: 1.25rem; max-width: 22rem; font-size: .9375rem; line-height: 1.6; }
+.rodape h3 { font: 600 .8125rem/1 var(--fonte-texto); letter-spacing: .14em; text-transform: uppercase; color: #fff; margin-bottom: 1.25rem; }
+.rodape ul { display: grid; gap: .75rem; font-size: .9375rem; }
+.rodape a { transition: color var(--dur) var(--ease); }
+@media (hover: hover) { .rodape a:hover { color: var(--amarelo); } }
+.rodape__contato a, .rodape__contato span, .rodape__redes a { display: inline-flex; align-items: flex-start; gap: .625rem; line-height: 1.45; }
+.rodape .i { width: 1.125rem; height: 1.125rem; margin-top: .125rem; color: #3DDC84; }
+.rodape__base { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 2rem; margin-top: clamp(2.5rem, 5vw, 4rem); padding-top: 1.5rem; border-top: 1px solid rgb(255 255 255 / .1); font-size: .875rem; }
+.rodape__base a { color: #fff; }
+@media (max-width: 63.99em) { .rodape__grade { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 29.99em) { .rodape__grade { grid-template-columns: minmax(0, 1fr); } }
+
+/* crédito: "Site por" + a logo da ProRec Produtora (como no 0100 Geomon), sem sublinhado */
+.rodape__credito { display: flex; align-items: center; gap: .75rem; }
+.rodape__credito a { display: block; transition: opacity var(--dur) var(--ease); }
+.rodape__credito a:hover { opacity: .8; }
+.rodape__credito img { display: block; width: 7.75rem; height: auto; }

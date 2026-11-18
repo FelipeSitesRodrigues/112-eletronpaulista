@@ -1,0 +1,84 @@
+/* ---------------------------------------------------------------- 03 · o treinamento
+   Mockup aprovado (mockup-secao-treinamento-aprovado.png), organizado como os Wearables do
+   08-inter: verde da marca com luz atrás dos produtos, título à esquerda, os 3 equipamentos
+   flutuando à direita sobre uma linha de luz amarela, e 3 cartões de foto embaixo.
+   Os equipamentos sobem e descem cada um no seu ritmo (só transform), e a sombra no chão
+   encolhe e clareia junto. */
+.treino {
+  color: #fff;
+  background:
+    radial-gradient(48% 62% at 74% 34%, rgb(38 168 96 / .42), rgb(38 168 96 / 0) 70%),
+    linear-gradient(160deg, #0B7446 0%, var(--verde) 38%, #064A2D 100%);
+}
+.treino__topo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+.treino__titulo { font-size: clamp(2.375rem, 1.2rem + 3.2vw, 4rem); max-width: 11.5em; }
+.treino__desc { margin-top: 1.5rem; max-width: 33rem; font-size: clamp(1.0625rem, 1rem + .25vw, 1.1875rem); line-height: 1.55; color: rgb(255 255 255 / .82); }
+.treino__chips { display: flex; flex-wrap: wrap; gap: .625rem; margin-top: 2rem; }
+.treino__chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .625rem 1rem;
+  border-radius: 999px;
+  font-size: .9375rem;
+  font-weight: 500;
+  background: rgb(255 255 255 / .08);
+  border: 1px solid rgb(255 255 255 / .2);
+}
+.treino__chips .i { width: 1.125rem; height: 1.125rem; color: var(--amarelo); }
+.treino__botao { margin-top: 2.25rem; }
+
+/* palco dos equipamentos: posições em % do palco, igual ao mockup */
+.treino__palco { position: relative; aspect-ratio: 16 / 10; }
+.treino__luz {
+  position: absolute;
+  left: -6%;
+  right: -10%;
+  top: 46%;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(242 215 43 / 0), rgb(255 236 120 / .95) 30%, #FFF6B0 50%, rgb(255 236 120 / .95) 70%, rgb(242 215 43 / 0));
+  box-shadow: 0 0 18px 4px rgb(242 215 43 / .55), 0 0 60px 14px rgb(242 215 43 / .22);
+}
+.equip { position: absolute; margin: 0; }
+.equip picture, .equip img { display: block; width: 100%; height: auto; }
+.equip img { position: relative; z-index: 1; filter: drop-shadow(0 1.5rem 2rem rgb(0 20 10 / .45)); }
+.equip--monitor { left: 0; top: 12%; width: 35%; }
+.equip--receptor { left: 39.5%; top: 28%; width: 25%; }
+.equip--modulo { left: 69%; top: 20%; width: 31%; }
+.equip__sombra {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: calc(100% + 1.5rem);
+  height: 1.25rem;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(0 25 12 / .55), rgb(0 25 12 / 0));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .equip img { animation: equip-flutua var(--d-f, 6s) var(--ease-in-out) infinite alternate; }
+  .equip__sombra { animation: equip-sombra var(--d-f, 6s) var(--ease-in-out) infinite alternate; }
+  .equip--monitor { --d-f: 6.4s; }
+  .equip--receptor { --d-f: 5.2s; }
+  .equip--receptor img, .equip--receptor .equip__sombra { animation-delay: -2.1s; }
+  .equip--modulo { --d-f: 7s; }
+  .equip--modulo img, .equip--modulo .equip__sombra { animation-delay: -4s; }
+}
+@keyframes equip-flutua { from { transform: translate3d(0, 4%, 0) rotate(-1.2deg); } to { transform: translate3d(0, -5%, 0) rotate(1.2deg); } }
+@keyframes equip-sombra { from { transform: scaleX(1); opacity: .95; } to { transform: scaleX(.78); opacity: .55; } }
+
+.treino__cartoes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 1.6vw, 1.5rem);
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+}
+
+@media (max-width: 59.99em) {
+  .treino__topo { grid-template-columns: minmax(0, 1fr); }
+  .treino__palco { width: min(100%, 36rem); margin-inline: auto; }
+}

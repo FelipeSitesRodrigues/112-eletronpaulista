@@ -1,0 +1,25 @@
+<section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
+  <!-- a cena do mockup (modelo "Desde 2019" da Geomon): a foto inteira do instrutor, o ano
+       gigante na parede e, por cima dele, a camada só com a cabeça (scripts/recortar-sobre.py),
+       alinhada com a foto: a cabeça passa na frente das letras. Proporção travada (3:2 no
+       computador, 2:3 no celular) pra o ano ficar sempre no mesmo lugar da foto. -->
+  <div class="sobre__cena" data-revela="palavras">
+    <img data-img="sobre-foto" data-img-movel="sobre-foto-movel" data-movel-media="(max-width: 47.99em)" data-movel-sizes="100vw" sizes="100vw" data-picture="sobre__foto" alt="Instrutor da Eletron Paulista de braços cruzados no laboratório, com monitores de sinal, receptor GPS e microscópio na bancada" loading="lazy" decoding="async">
+    <span class="sobre__pilula" data-revela>A empresa</span>
+    <p class="sobre__ano" aria-hidden="true"><span class="sobre__ano-p" style="--i:0">Desde</span> <span class="sobre__ano-p" style="--i:1">2008</span></p>
+    <img data-img="sobre-recorte" data-img-movel="sobre-recorte-movel" data-movel-media="(max-width: 47.99em)" data-movel-sizes="100vw" sizes="100vw" data-picture="sobre__recorte" alt="" loading="lazy" decoding="async">
+  </div>
+
+  <div class="container sobre__caixa">
+    <div class="sobre__texto">
+      <h2 class="titulo sobre__titulo" id="sobre-titulo" data-palavras data-revela="palavras"><span class="sr-only">Desde 2008. </span>Quem ensina<br> <span class="destaque-amarelo">é quem conserta.</span></h2>
+      <p class="sobre__desc" data-revela style="--atraso:.15s">Monitor apagado, receptor sem sinal, piloto automático que não engata. Tudo isso passou pela nossa bancada no oeste baiano, e cada defeito virou procedimento. É esse procedimento que você aprende.</p>
+      <a class="sobre__link" href="{{cfg.links.whatsapp}}" target="_blank" rel="noopener" data-revela style="--atraso:.3s">Fale com a equipe<i data-i="arrow-right" data-w="bold"></i></a>
+    </div>
+    <ul class="sobre__pilares">
+      <li data-revela="grade" style="--i:0"><strong>Instrutores de bancada</strong><span>Quem dá aula atende máquina de verdade.</span></li>
+      <li data-revela="grade" style="--i:1"><strong>Laboratório montado</strong><span>Microscópio, solda e osciloscópio, um posto por aluno.</span></li>
+      <li data-revela="grade" style="--i:2"><strong>Defeitos reais</strong><span>A aula parte do que mais chega na bancada.</span></li>
+    </ul>
+  </div>
+</section>

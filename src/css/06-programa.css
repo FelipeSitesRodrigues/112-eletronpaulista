@@ -1,0 +1,158 @@
+/* ---------------------------------------------------------------- 06 · programa
+   Mockup do Felipe (2026-11-17): verde profundo, título numa linha só com o horário à direita,
+   5 cartões que são fotos inteiras (sem área branca), com degradê escuro embaixo e o texto por
+   cima, fio amarelo no topo e seta de vidro no canto. Cada cartão abre o WhatsApp com a
+   mensagem daquele dia. Faixa escura com cronômetro e botão. No pé, curva verde e lavoura.
+   Celular: os cartões viram trilho de arrastar (.trilho do _comum). */
+.programa {
+  --luz: #2EE07E;
+  color: #fff;
+  background:
+    radial-gradient(45% 60% at 92% 0%, rgb(46 224 126 / .22), rgb(46 224 126 / 0) 70%),
+    radial-gradient(40% 50% at 0% 10%, rgb(10 107 65 / .55), rgb(10 107 65 / 0) 70%),
+    linear-gradient(180deg, #08482D 0%, #053722 55%, #042A1B 100%);
+}
+.programa > .container { position: relative; z-index: 1; }
+
+/* cabeçalho: título à esquerda, divisória, calendário e horário à direita */
+.programa__topo { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem 3rem; }
+.programa__rotulo { display: inline-flex; align-items: center; gap: .875rem; }
+.programa__rotulo::after { content: ''; width: 4.5rem; height: 2px; background: var(--amarelo); }
+.programa__titulo { margin-top: .75rem; font-size: clamp(2.25rem, 1.2rem + 2.9vw, 4rem); line-height: 1.02; }
+.programa__horario {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 27rem;
+  padding: .25rem 0 .375rem 2.25rem;
+  border-left: 1px solid rgb(46 224 126 / .45);
+  font-size: clamp(1rem, .95rem + .2vw, 1.125rem);
+  line-height: 1.45;
+  color: rgb(255 255 255 / .85);
+}
+.programa__horario .i { flex: none; width: 2.75rem; height: 2.75rem; color: var(--luz); }
+
+/* cartões de foto */
+.dias {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(.75rem, 1.3vw, 1.25rem);
+  margin: clamp(2rem, 3.5vw, 2.75rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.dia { position: relative; min-width: 0; }
+.dia__link {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  --foto: clamp(14rem, 19vw, 17.5rem);
+  justify-content: flex-start;
+  height: 100%;
+  padding: clamp(1.125rem, 1.5vw, 1.5rem);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  background: #042A1B;
+  border: 1px solid rgb(46 224 126 / .35);
+  box-shadow: 0 1.5rem 3rem -1.5rem rgb(0 0 0 / .6);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+/* fio amarelo no topo, só no começo da borda, como no mockup */
+.dia__link::before { content: ''; position: absolute; z-index: 3; top: 0; left: 1.25rem; width: 38%; height: 4px; border-radius: 0 0 4px 4px; background: var(--amarelo); box-shadow: 0 0 12px rgb(242 215 43 / .55); }
+/* degradê: a foto ocupa o cartão todo e escurece em direção ao texto */
+.dia__link::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(4 42 27 / 0) calc(var(--foto) * .45), rgb(4 42 27 / .6) calc(var(--foto) * .78), rgb(4 42 27 / .95) var(--foto), #042A1B calc(var(--foto) + 2rem));
+}
+.dia picture { position: absolute; z-index: -2; inset: 0 0 auto; height: calc(var(--foto) + 2rem); }
+.dia__corpo { margin-top: calc(var(--foto) - 4.25rem); }
+.dia__foto { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 40%; transition: transform 1s var(--ease); }
+.dia__foto--1 { object-position: 30% 50%; }
+.dia__foto--4 { object-position: 50% 30%; }
+.dia__seta {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: .875rem;
+  background: rgb(4 30 20 / .55);
+  border: 1px solid rgb(255 255 255 / .28);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.dia__seta .i { width: 1.25rem; height: 1.25rem; }
+.dia__num { display: block; font: 700 clamp(2.5rem, 1.8rem + 1.5vw, 3.25rem)/.9 var(--fonte-titulo); font-stretch: 112%; letter-spacing: -.02em; color: var(--amarelo); }
+.dia__rotulo { display: block; margin-top: .625rem; font-size: .8125rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: rgb(255 255 255 / .7); }
+.dia h3 { margin-top: .25rem; font: 600 clamp(1.1875rem, 1rem + .45vw, 1.4375rem)/1.15 var(--fonte-titulo); font-stretch: 106%; }
+.dia p { margin-top: .625rem; font-size: .9375rem; line-height: 1.45; color: rgb(255 255 255 / .8); }
+@media (hover: hover) {
+  .dia__link:hover { border-color: rgb(46 224 126 / .8); }
+  .dia__link:hover .dia__foto { transform: scale(1.05); }
+  .dia__link:hover .dia__seta { background: var(--amarelo); color: var(--preto); }
+}
+.dia__link:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 3px; }
+
+/* faixa de baixo: cronômetro com linhas de velocidade, divisória, texto e botão */
+.programa__faixa {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-top: clamp(1.25rem, 2vw, 1.75rem);
+  padding: clamp(1.25rem, 2vw, 1.5rem) clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 1.75rem;
+  background: rgb(3 28 18 / .75);
+  border: 1px solid rgb(46 224 126 / .3);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .05);
+}
+.programa__timer { position: relative; flex: none; display: flex; align-items: center; padding-right: clamp(1.5rem, 2.5vw, 2.5rem); border-right: 1px solid rgb(46 224 126 / .45); }
+.programa__timer .i { width: 3.5rem; height: 3.5rem; color: var(--luz); }
+.programa__vel { width: 1.5rem; height: 1rem; margin-right: .25rem; background: linear-gradient(var(--luz), var(--luz)) 0 0 / 70% 2px no-repeat, linear-gradient(var(--luz), var(--luz)) 40% 50% / 100% 2px no-repeat, linear-gradient(var(--luz), var(--luz)) 20% 100% / 60% 2px no-repeat; border-radius: 2px; }
+.programa__faixa p { flex: 1; font: 500 clamp(1.125rem, .95rem + .6vw, 1.625rem)/1.3 var(--fonte-titulo); color: #fff; }
+.programa__faixa strong { font-weight: 600; color: var(--amarelo); }
+.programa__faixa .botao { flex: none; min-height: 3.75rem; padding-inline: 2rem; }
+
+/* pé: curva verde à esquerda e lavoura em perspectiva à direita */
+.programa__curva { position: absolute; left: 0; bottom: calc(var(--divisao) - 1rem); width: 60%; height: clamp(5rem, 9vw, 8rem); pointer-events: none; }
+.programa__curva path { fill: none; stroke: var(--luz); stroke-width: 7; stroke-linecap: round; vector-effect: non-scaling-stroke; opacity: .85; }
+.programa picture:has(.programa__lavoura) { position: absolute; right: 0; bottom: calc(var(--divisao) - .5rem); width: 66%; pointer-events: none; }
+.programa__lavoura {
+  display: block;
+  width: 100%;
+  height: clamp(4rem, 6vw, 5.75rem);
+  max-width: none;
+  object-fit: cover;
+  object-position: 100% 50%;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 30%);
+  mask-image: linear-gradient(90deg, transparent, #000 30%);
+}
+
+/* tablet: 3 + 2 cartões, título em cima do horário */
+@media (max-width: 74.99em) {
+  .programa__topo { flex-direction: column; align-items: flex-start; }
+  .programa__horario { padding-left: 0; border-left: 0; max-width: none; }
+  .dias { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .dia { grid-column: span 2; }
+  .dia:nth-child(4) { grid-column: 2 / span 2; }
+}
+@media (max-width: 47.99em) {
+  .programa__titulo br { display: none; }
+  .programa__horario { gap: .875rem; }
+  .programa__horario .i { width: 2.25rem; height: 2.25rem; }
+  .trilho.dias > * { flex-basis: 76%; }
+  .dia__link { --foto: 15rem; }
+  .programa__faixa { flex-direction: column; align-items: stretch; text-align: left; }
+  .programa__timer { padding: 0 0 1rem; border-right: 0; border-bottom: 1px solid rgb(46 224 126 / .45); }
+  .programa__faixa .botao { width: 100%; }
+  .programa__curva { width: 90%; }
+  .programa picture:has(.programa__lavoura) { width: 100%; }
+}

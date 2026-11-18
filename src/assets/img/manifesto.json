@@ -1,0 +1,436 @@
+{
+ "hero-capa-854.avif": {
+  "w": 854,
+  "h": 480,
+  "kb": 36
+ },
+ "hero-capa-854.webp": {
+  "w": 854,
+  "h": 480,
+  "kb": 34
+ },
+ "hero-capa-1280.avif": {
+  "w": 1280,
+  "h": 720,
+  "kb": 59
+ },
+ "hero-capa-1280.webp": {
+  "w": 1280,
+  "h": 720,
+  "kb": 56
+ },
+ "hero-capa-celular-440.avif": {
+  "w": 440,
+  "h": 720,
+  "kb": 25
+ },
+ "hero-capa-celular-440.webp": {
+  "w": 440,
+  "h": 720,
+  "kb": 24
+ },
+ "logo-branca-240.webp": {
+  "w": 240,
+  "h": 47,
+  "kb": 5
+ },
+ "logo-branca-480.webp": {
+  "w": 480,
+  "h": 93,
+  "kb": 9
+ },
+ "ab-ep-720.webp": {
+  "w": 720,
+  "h": 140,
+  "kb": 3
+ },
+ "ab-ep-1200.webp": {
+  "w": 1200,
+  "h": 233,
+  "kb": 6
+ },
+ "ab-verde-720.webp": {
+  "w": 720,
+  "h": 140,
+  "kb": 1
+ },
+ "ab-verde-1200.webp": {
+  "w": 1200,
+  "h": 233,
+  "kb": 2
+ },
+ "ab-amarelo-720.webp": {
+  "w": 720,
+  "h": 140,
+  "kb": 1
+ },
+ "ab-amarelo-1200.webp": {
+  "w": 1200,
+  "h": 233,
+  "kb": 2
+ },
+ "ab-eletron-720.webp": {
+  "w": 720,
+  "h": 140,
+  "kb": 3
+ },
+ "ab-eletron-1200.webp": {
+  "w": 1200,
+  "h": 233,
+  "kb": 5
+ },
+ "ab-paulista-720.webp": {
+  "w": 720,
+  "h": 140,
+  "kb": 6
+ },
+ "ab-paulista-1200.webp": {
+  "w": 1200,
+  "h": 233,
+  "kb": 10
+ },
+ "_abertura": {
+  "w": 2187,
+  "h": 424
+ },
+ "equip-monitor-360.webp": {
+  "w": 360,
+  "h": 339,
+  "kb": 25
+ },
+ "equip-monitor-560.webp": {
+  "w": 466,
+  "h": 439,
+  "kb": 36
+ },
+ "equip-receptor-360.webp": {
+  "w": 360,
+  "h": 262,
+  "kb": 12
+ },
+ "equip-receptor-560.webp": {
+  "w": 401,
+  "h": 292,
+  "kb": 15
+ },
+ "equip-modulo-360.webp": {
+  "w": 360,
+  "h": 260,
+  "kb": 21
+ },
+ "equip-modulo-560.webp": {
+  "w": 471,
+  "h": 340,
+  "kb": 30
+ },
+ "cartao-osciloscopio-480.avif": {
+  "w": 480,
+  "h": 360,
+  "kb": 27
+ },
+ "cartao-osciloscopio-480.webp": {
+  "w": 480,
+  "h": 360,
+  "kb": 31
+ },
+ "cartao-osciloscopio-800.avif": {
+  "w": 800,
+  "h": 600,
+  "kb": 55
+ },
+ "cartao-osciloscopio-800.webp": {
+  "w": 800,
+  "h": 600,
+  "kb": 62
+ },
+ "cartao-microscopio-480.avif": {
+  "w": 480,
+  "h": 360,
+  "kb": 20
+ },
+ "cartao-microscopio-480.webp": {
+  "w": 480,
+  "h": 360,
+  "kb": 23
+ },
+ "cartao-microscopio-800.avif": {
+  "w": 800,
+  "h": 600,
+  "kb": 41
+ },
+ "cartao-microscopio-800.webp": {
+  "w": 800,
+  "h": 600,
+  "kb": 46
+ },
+ "cartao-instrutor-480.avif": {
+  "w": 480,
+  "h": 360,
+  "kb": 16
+ },
+ "cartao-instrutor-480.webp": {
+  "w": 480,
+  "h": 360,
+  "kb": 17
+ },
+ "cartao-instrutor-800.avif": {
+  "w": 800,
+  "h": 600,
+  "kb": 31
+ },
+ "cartao-instrutor-800.webp": {
+  "w": 800,
+  "h": 600,
+  "kb": 33
+ },
+ "programa-dia-1-360.avif": {
+  "w": 360,
+  "h": 330,
+  "kb": 13
+ },
+ "programa-dia-1-360.webp": {
+  "w": 360,
+  "h": 330,
+  "kb": 17
+ },
+ "programa-dia-1-640.avif": {
+  "w": 640,
+  "h": 587,
+  "kb": 25
+ },
+ "programa-dia-1-640.webp": {
+  "w": 640,
+  "h": 587,
+  "kb": 31
+ },
+ "programa-dia-2-360.avif": {
+  "w": 360,
+  "h": 338,
+  "kb": 12
+ },
+ "programa-dia-2-360.webp": {
+  "w": 360,
+  "h": 338,
+  "kb": 13
+ },
+ "programa-dia-2-640.avif": {
+  "w": 640,
+  "h": 600,
+  "kb": 21
+ },
+ "programa-dia-2-640.webp": {
+  "w": 640,
+  "h": 600,
+  "kb": 25
+ },
+ "programa-dia-3-360.avif": {
+  "w": 360,
+  "h": 339,
+  "kb": 11
+ },
+ "programa-dia-3-360.webp": {
+  "w": 360,
+  "h": 339,
+  "kb": 12
+ },
+ "programa-dia-3-640.avif": {
+  "w": 640,
+  "h": 602,
+  "kb": 20
+ },
+ "programa-dia-3-640.webp": {
+  "w": 640,
+  "h": 602,
+  "kb": 23
+ },
+ "programa-dia-4-360.avif": {
+  "w": 360,
+  "h": 338,
+  "kb": 6
+ },
+ "programa-dia-4-360.webp": {
+  "w": 360,
+  "h": 338,
+  "kb": 7
+ },
+ "programa-dia-4-640.avif": {
+  "w": 640,
+  "h": 600,
+  "kb": 11
+ },
+ "programa-dia-4-640.webp": {
+  "w": 640,
+  "h": 600,
+  "kb": 12
+ },
+ "programa-dia-5-360.avif": {
+  "w": 360,
+  "h": 336,
+  "kb": 14
+ },
+ "programa-dia-5-360.webp": {
+  "w": 360,
+  "h": 336,
+  "kb": 17
+ },
+ "programa-dia-5-640.avif": {
+  "w": 640,
+  "h": 598,
+  "kb": 27
+ },
+ "programa-dia-5-640.webp": {
+  "w": 640,
+  "h": 598,
+  "kb": 31
+ },
+ "programa-lavoura-1032.avif": {
+  "w": 1032,
+  "h": 83,
+  "kb": 12
+ },
+ "programa-lavoura-1032.webp": {
+  "w": 1032,
+  "h": 83,
+  "kb": 14
+ },
+ "sobre-foto-960.avif": {
+  "w": 960,
+  "h": 640,
+  "kb": 35
+ },
+ "sobre-foto-960.webp": {
+  "w": 960,
+  "h": 640,
+  "kb": 37
+ },
+ "sobre-foto-1536.avif": {
+  "w": 1536,
+  "h": 1024,
+  "kb": 66
+ },
+ "sobre-foto-1536.webp": {
+  "w": 1536,
+  "h": 1024,
+  "kb": 71
+ },
+ "sobre-foto-movel-640.avif": {
+  "w": 640,
+  "h": 960,
+  "kb": 34
+ },
+ "sobre-foto-movel-640.webp": {
+  "w": 640,
+  "h": 960,
+  "kb": 35
+ },
+ "sobre-foto-movel-1024.avif": {
+  "w": 1024,
+  "h": 1536,
+  "kb": 68
+ },
+ "sobre-foto-movel-1024.webp": {
+  "w": 1024,
+  "h": 1536,
+  "kb": 70
+ },
+ "sobre-recorte-960.webp": {
+  "w": 960,
+  "h": 640,
+  "kb": 8
+ },
+ "sobre-recorte-1536.webp": {
+  "w": 1536,
+  "h": 1024,
+  "kb": 19
+ },
+ "sobre-recorte-movel-640.webp": {
+  "w": 640,
+  "h": 960,
+  "kb": 11
+ },
+ "sobre-recorte-movel-1024.webp": {
+  "w": 1024,
+  "h": 1536,
+  "kb": 25
+ },
+ "turma-1-420.avif": {
+  "w": 420,
+  "h": 560,
+  "kb": 24
+ },
+ "turma-1-420.webp": {
+  "w": 420,
+  "h": 560,
+  "kb": 26
+ },
+ "turma-1-700.avif": {
+  "w": 700,
+  "h": 933,
+  "kb": 46
+ },
+ "turma-1-700.webp": {
+  "w": 700,
+  "h": 933,
+  "kb": 50
+ },
+ "turma-2-420.avif": {
+  "w": 420,
+  "h": 560,
+  "kb": 14
+ },
+ "turma-2-420.webp": {
+  "w": 420,
+  "h": 560,
+  "kb": 14
+ },
+ "turma-2-700.avif": {
+  "w": 700,
+  "h": 933,
+  "kb": 31
+ },
+ "turma-2-700.webp": {
+  "w": 700,
+  "h": 933,
+  "kb": 30
+ },
+ "turma-3-420.avif": {
+  "w": 420,
+  "h": 560,
+  "kb": 22
+ },
+ "turma-3-420.webp": {
+  "w": 420,
+  "h": 560,
+  "kb": 24
+ },
+ "turma-3-700.avif": {
+  "w": 700,
+  "h": 933,
+  "kb": 43
+ },
+ "turma-3-700.webp": {
+  "w": 700,
+  "h": 933,
+  "kb": 46
+ },
+ "turma-4-420.avif": {
+  "w": 420,
+  "h": 560,
+  "kb": 31
+ },
+ "turma-4-420.webp": {
+  "w": 420,
+  "h": 560,
+  "kb": 35
+ },
+ "turma-4-700.avif": {
+  "w": 700,
+  "h": 933,
+  "kb": 75
+ },
+ "turma-4-700.webp": {
+  "w": 700,
+  "h": 933,
+  "kb": 80
+ }
+}

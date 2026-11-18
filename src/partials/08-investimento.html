@@ -1,0 +1,54 @@
+<section class="secao invest" id="investimento" aria-labelledby="invest-titulo">
+  <svg class="invest__curva" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="invest-curva-cor" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#2EE07E" stop-opacity="0"/>
+        <stop offset=".25" stop-color="#2EE07E" stop-opacity=".9"/>
+        <stop offset=".62" stop-color="#2EE07E" stop-opacity=".35"/>
+        <stop offset=".85" stop-color="#F2D72B" stop-opacity=".85"/>
+        <stop offset="1" stop-color="#F2D72B" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path class="invest__curva-halo" d="M0 150 C 320 60, 620 70, 900 150 S 1300 170, 1440 60" />
+    <path class="invest__curva-fio" d="M0 150 C 320 60, 620 70, 900 150 S 1300 170, 1440 60" />
+  </svg>
+
+  <div class="container invest__grade">
+    <div class="invest__cabeca">
+      <span class="rotulo rotulo--amarelo invest__rotulo" data-revela>Investimento</span>
+      <h2 class="titulo invest__titulo" id="invest-titulo" data-palavras data-revela="palavras">Tudo que<br> <span class="destaque-amarelo">está incluso</span></h2>
+      <p class="invest__desc" data-revela style="--atraso:.2s">Um treinamento completo e prático, com estrutura profissional e suporte mesmo depois do curso.</p>
+    </div>
+
+    <ul class="invest__beneficios">
+      <li data-revela="grade" style="--i:0"><i data-i="clock" data-w="light"></i>40 horas presenciais</li>
+      <li data-revela="grade" style="--i:1"><i data-i="book-open" data-w="light"></i>Material didático</li>
+      <li data-revela="grade" style="--i:2"><i data-i="seal-check" data-w="light"></i>Certificado de conclusão</li>
+      <li data-revela="grade" style="--i:1"><i data-i="coffee" data-w="light"></i>Coffee break e almoço nos 5 dias</li>
+      <li data-revela="grade" style="--i:2"><i data-i="users-three" data-w="light"></i>Grupo de ex-alunos</li>
+      <li data-revela="grade" style="--i:3"><i data-i="headset" data-w="light"></i>Suporte de 30 dias depois do curso</li>
+    </ul>
+
+    <div class="invest__equip" aria-hidden="true">
+      <span class="invest__equip-luz"></span>
+      <img class="invest__peca invest__peca--monitor" data-img="equip-monitor" sizes="(max-width: 47.99em) 70vw, 22rem" alt="" loading="lazy" decoding="async">
+      <img class="invest__peca invest__peca--receptor" data-img="equip-receptor" sizes="(max-width: 47.99em) 34vw, 10rem" alt="" loading="lazy" decoding="async">
+      <img class="invest__peca invest__peca--modulo" data-img="equip-modulo" sizes="(max-width: 47.99em) 42vw, 13rem" alt="" loading="lazy" decoding="async">
+      <span class="invest__chao"></span>
+    </div>
+
+    <div class="preco" data-revela="zoom" style="--atraso:.2s">
+      <span class="preco__selo"><i data-i="shield-check" data-w="fill"></i>Garantia de 7 dias</span>
+      <p class="preco__rotulo">Investimento</p>
+      <p class="preco__valor"><span>R$</span>15.000</p>
+      <p class="preco__cond"><i data-i="credit-card" data-w="light"></i>30% de entrada + até 3x no cartão</p>
+      <p class="preco__desconto"><i data-i="percent" data-w="bold"></i><span><strong>20% de desconto</strong>Para pagamento à vista</span></p>
+      <a class="botao botao--amarelo preco__botao" href="#inscricao" data-brilho><span class="brilho" aria-hidden="true"><span class="brilho__volta"><span class="brilho__ponto"></span></span></span><span class="brilho-fio" aria-hidden="true"><span class="brilho__ponto"></span></span>Quero minha vaga<i data-i="arrow-right" data-w="bold"></i></a>
+      <ul class="preco__info">
+        <li><i data-i="users-three" data-w="light"></i>Turmas de até 21 alunos</li>
+        <li><i data-i="map-pin" data-w="light"></i>Luís Eduardo Magalhães, BA</li>
+        <li><i data-i="calendar-blank" data-w="light"></i>Próxima turma em breve</li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,100 @@
+/* ---------------------------------------------------------------- 04 · sobre (A empresa)
+   Mockup aprovado (mockup-secao-sobre-aprovado.png), modelo "Desde 2019" da Geomon: a foto
+   inteira do instrutor, "Desde 2008" gigante na parede e a camada só com a cabeça por cima
+   do ano. Foto e recorte têm o mesmo tamanho e ficam um em cima do outro; a cena tem a
+   proporção travada da foto (3:2 / 2:3) e o ano é posto em % dela (container query), então
+   a cabeça cai sempre no mesmo ponto das letras. O ano termina acima do queixo, que é onde
+   o recorte acaba (33% da altura no computador, 36% no celular).
+   No computador o texto e os pilares ficam por cima da parte escura de baixo da foto; no
+   celular vêm embaixo dela. */
+.sobre { position: relative; color: #fff; background: var(--preto); }
+.sobre__cena {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 3 / 2;
+  container-type: inline-size;
+  overflow: hidden;
+}
+.sobre__foto, .sobre__recorte, .sobre__foto img, .sobre__recorte img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sobre__foto img, .sobre__recorte img { object-fit: cover; }
+.sobre__recorte { z-index: 2; pointer-events: none; }
+.sobre__pilula {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 4.2%;
+  translate: -50% 0;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1.125rem;
+  border-radius: 999px;
+  font-size: .9375rem;
+  font-weight: 500;
+  border: 1px solid rgb(255 255 255 / .35);
+  background: rgb(20 17 16 / .4);
+}
+.sobre__pilula::before { content: ''; width: .5rem; height: .5rem; border-radius: 50%; background: var(--amarelo); }
+.sobre__ano {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 9.5%;
+  text-align: center;
+  font: 700 16.6cqw/1 var(--fonte-titulo);
+  font-stretch: 100%;
+  letter-spacing: -.035em;
+  white-space: nowrap;
+  color: #fff;
+}
+.sobre__ano-p { display: inline-block; }
+/* entrada: as duas palavras sobem atrás da cabeça quando a cena chega na tela */
+.js .sobre__ano-p { opacity: 0; transform: translate3d(0, 24%, 0); transition: opacity .9s var(--ease) calc(var(--i) * .12s + .1s), transform 1.1s var(--ease) calc(var(--i) * .12s + .1s); }
+.js .sobre__cena.visivel .sobre__ano-p { opacity: 1; transform: none; }
+
+/* texto e pilares por cima do pé escuro da foto */
+.sobre__caixa {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2.5rem clamp(3rem, 8vw, 9rem);
+  align-items: end;
+  margin-top: -27cqw;
+  margin-top: max(-27vw, -24rem);
+  padding-bottom: clamp(3.5rem, 6vw, 5rem);
+}
+.sobre__titulo { font-size: clamp(2.25rem, 1.2rem + 3vw, 3.75rem); }
+.sobre__desc { margin-top: 1.25rem; max-width: 34rem; font-size: clamp(1rem, .95rem + .25vw, 1.125rem); line-height: 1.6; color: rgb(255 255 255 / .82); }
+.sobre__link { display: inline-flex; align-items: center; gap: .75rem; margin-top: 1.75rem; font: 600 1.0625rem/1 var(--fonte-titulo); }
+.sobre__link .i { width: 1.25rem; height: 1.25rem; color: #3DDC84; transition: transform var(--dur) var(--ease); }
+@media (hover: hover) { .sobre__link:hover .i { transform: translateX(4px); } }
+
+.sobre__pilares { position: relative; display: grid; }
+.sobre__pilares::before { content: ''; position: absolute; left: .4375rem; top: 1.25rem; bottom: 1.25rem; width: 1px; background: rgb(255 255 255 / .25); }
+.sobre__pilares li { position: relative; display: grid; gap: .25rem; padding: 1.125rem 0 1.125rem 2.5rem; }
+.sobre__pilares li + li { border-top: 1px solid rgb(255 255 255 / .14); }
+.sobre__pilares li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.4rem;
+  width: .9375rem;
+  height: .9375rem;
+  border-radius: 50%;
+  background: #3DDC84;
+  box-shadow: 0 0 0 4px rgb(61 220 132 / .18);
+}
+.sobre__pilares strong { font: 600 1.25rem/1.2 var(--fonte-titulo); font-stretch: 106%; }
+.sobre__pilares span { font-size: .9375rem; color: rgb(255 255 255 / .72); }
+
+@media (max-width: 59.99em) {
+  .sobre__caixa { grid-template-columns: minmax(0, 1fr); margin-top: max(-14vw, -9rem); }
+}
+@media (max-width: 47.99em) {
+  .sobre__cena { aspect-ratio: 2 / 3; }
+  .sobre__pilula { top: 6%; font-size: .8125rem; }
+  .sobre__ano { top: 19.5%; font-size: 17.5cqw; }
+  .sobre__caixa { margin-top: -28vw; padding-bottom: 3rem; }
+}

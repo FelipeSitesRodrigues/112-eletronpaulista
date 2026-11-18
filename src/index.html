@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- @preload -->
+  <script>
+    // js: liga as animações (kit /animacoes-site). js-abrindo: até a 1ª pintura, as seções
+    // abaixo do hero ficam fora do layout (99-desempenho.css). Sai na 1ª pintura ou em 2,5 s.
+    (function () {
+      var h = document.documentElement
+      h.classList.add('js', 'js-abrindo')
+      var pronto = function () { h.classList.remove('js-abrindo') }
+      try {
+        new PerformanceObserver(function (l) { if (l.getEntriesByName('first-contentful-paint').length) pronto() }).observe({ type: 'paint', buffered: true })
+      } catch (e) { pronto() }
+      setTimeout(pronto, 2500)
+    })()
+  </script>
+  <title>Curso de Eletrônica Embarcada Agrícola em LEM, BA | Eletron Paulista</title>
+  <meta name="description" content="Treinamento presencial de 5 dias em eletrônica de máquinas agrícolas: GPS, piloto automático, monitores John Deere, Case, NH, Trimble e Stara.">
+  <!-- @robots -->
+  <meta name="theme-color" content="#141110">
+  <meta name="format-detection" content="telephone=no">
+  <!-- @meta-dominio -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Eletron Paulista">
+  <meta property="og:title" content="Eletrônica embarcada se aprende na bancada | Eletron Paulista">
+  <meta property="og:description" content="5 dias de imersão com monitores, receptores GPS e pilotos automáticos das maiores marcas, em Luís Eduardo Magalhães, BA.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/Archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- @head-parciais -->
+  <!-- @css -->
+</head>
+<body>
+  <!-- @parcial 99-abertura -->
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- @parcial 00-header -->
+
+  <main id="conteudo">
+    <!-- @parcial 01-hero -->
+    <!-- @parcial 02-prova -->
+    <!-- @parcial 03-treinamento -->
+    <!-- @parcial 04-sobre -->
+    <!-- @parcial 05-dominar -->
+    <!-- @parcial 06-programa -->
+    <!-- @parcial 07-turma -->
+    <!-- @parcial 08-investimento -->
+    <!-- @parcial 09-duvidas -->
+    <!-- @parcial 10-perguntas -->
+    <!-- @parcial 11-inscricao -->
+  </main>
+
+  <!-- @parcial 99-rodape -->
+
+  <!-- @sprite -->
+  <!-- @schema -->
+  <!-- @js -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<section class="secao inscricao" id="inscricao" aria-labelledby="inscricao-titulo">
+  <svg class="inscricao__curva" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="inscricao-verde" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#2EE07E" stop-opacity=".9"/><stop offset=".55" stop-color="#2EE07E" stop-opacity=".15"/><stop offset=".75" stop-color="#2EE07E" stop-opacity="0"/></linearGradient>
+      <linearGradient id="inscricao-amarelo" x1="0" x2="1" y1="0" y2="0"><stop offset=".35" stop-color="#F2D72B" stop-opacity="0"/><stop offset=".7" stop-color="#F2D72B" stop-opacity=".9"/><stop offset="1" stop-color="#F2D72B" stop-opacity=".5"/></linearGradient>
+    </defs>
+    <path class="inscricao__curva-verde" d="M0 175 C 220 80, 520 60, 860 160" />
+    <path class="inscricao__curva-amarela" d="M520 200 C 840 120, 1140 90, 1440 110" />
+  </svg>
+  <div class="container inscricao__grade">
+    <div class="inscricao__texto">
+      <span class="rotulo rotulo--amarelo inscricao__rotulo" data-revela>Inscrição</span>
+      <h2 class="titulo" id="inscricao-titulo" data-palavras data-revela="palavras">Garanta sua vaga<br> <span class="destaque-amarelo">na próxima turma</span></h2>
+      <p class="inscricao__desc" data-revela style="--atraso:.15s">Preencha seus dados e a nossa equipe chama você em até 24 horas pra finalizar a inscrição.</p>
+      <ul class="inscricao__itens">
+        <li data-revela="grade" style="--i:0"><i data-i="clock" data-w="light"></i>Resposta em até 24 horas</li>
+        <li data-revela="grade" style="--i:1"><i data-i="shield-check" data-w="light"></i>Garantia de 7 dias</li>
+        <li data-revela="grade" style="--i:2"><i data-i="users-three" data-w="light"></i>Até 21 alunos por turma</li>
+      </ul>
+    </div>
+
+    <!-- O formulário vem num <template> e entra no lugar quando a seção chega perto
+         (11-inscricao.js): form no HTML faz o autofill forçar layout na 1ª pintura (memória).
+         Sem JS, o botão de WhatsApp do cartão resolve. Destino das respostas: a definir com o
+         dono; por enquanto o envio abre o WhatsApp com os dados preenchidos. -->
+    <div class="form-cartao" data-revela="zoom" data-form-vaga>
+      <template>
+        <form class="form" novalidate>
+          <div class="form__campo form__campo--largo"><label for="f-nome">Nome completo</label><input id="f-nome" name="nome" autocomplete="name" required></div>
+          <div class="form__campo"><label for="f-whats">WhatsApp</label><input id="f-whats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(77) 99999-9999" required></div>
+          <div class="form__campo"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="form__campo"><label for="f-cidade">Cidade e estado</label><input id="f-cidade" name="cidade" autocomplete="address-level2" placeholder="Ex.: Barreiras, BA"></div>
+          <div class="form__campo"><label for="f-prof">Você trabalha como</label>
+            <select id="f-prof" name="profissao"><option value="">Selecione</option><option>Mecânico</option><option>Eletricista</option><option>Técnico de concessionária</option><option>Autônomo com oficina própria</option><option>Outro</option></select>
+          </div>
+          <div class="form__campo form__campo--largo"><label for="f-msg">Mensagem <span>(opcional)</span></label><textarea id="f-msg" name="mensagem" rows="3"></textarea></div>
+          <label class="form__aceite"><input type="checkbox" name="aceite" required><span>Concordo em receber contato da Eletron Paulista sobre o treinamento.</span></label>
+          <button class="botao botao--amarelo form__enviar" type="submit">Enviar inscrição<i data-i="arrow-right" data-w="bold"></i></button>
+          <p class="form__aviso" role="status" aria-live="polite"></p>
+        </form>
+      </template>
+      <p class="form__ou" aria-hidden="true"><span>ou</span></p>
+      <a class="form__whats" href="{{cfg.links.whatsappVaga}}" target="_blank" rel="noopener"><i data-i="whatsapp-logo" data-w="light"></i>ou fale pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
