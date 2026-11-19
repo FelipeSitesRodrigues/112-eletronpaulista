@@ -1,0 +1,52 @@
+<section class="secao depoimentos" id="depoimentos" aria-labelledby="depoimentos-titulo">
+  <div class="container">
+    <div class="cabeca">
+      <div>
+        <span class="rotulo" data-revela>Depoimentos</span>
+        <h2 class="titulo" id="depoimentos-titulo" data-palavras data-revela="palavras">Quem fez<br> <span class="destaque">recomenda</span></h2>
+      </div>
+      <p class="texto cabeca__texto" data-revela style="--atraso:.15s">Alunos de vários estados contam como foi a semana na bancada. Toque pra assistir.</p>
+    </div>
+
+    <!-- vídeos do Instagram da Eletron Paulista (links mandados pelo Wilton em 2026-11-19), em 960p
+         em src/assets/depoimentos. Só a capa carrega; o vídeo entra no clique (11-depoimentos.js).
+         Celular: 2 por linha, o 5º no meio. -->
+    <ul class="depos">
+      <li class="depo" data-revela="grade" style="--i:0">
+        <button class="depo__botao" type="button" data-video="/assets/depoimentos/depoimento-1.mp4" aria-label="Assistir o depoimento de Maurício">
+          <img class="depo__capa" src="/assets/depoimentos/depoimento-1.webp" alt="" width="540" height="960" loading="lazy" decoding="async">
+          <span class="depo__play" aria-hidden="true"><i data-i="play" data-w="fill"></i></span>
+          <span class="depo__texto"><span class="depo__frase">“O melhor treinamento de agricultura de precisão do Brasil.”</span><strong>Maurício</strong><span class="depo__local">Santa Catarina</span></span>
+        </button>
+      </li>
+      <li class="depo" data-revela="grade" style="--i:1">
+        <button class="depo__botao" type="button" data-video="/assets/depoimentos/depoimento-2.mp4" aria-label="Assistir o depoimento de Pedro Henrique">
+          <img class="depo__capa" src="/assets/depoimentos/depoimento-2.webp" alt="" width="540" height="960" loading="lazy" decoding="async">
+          <span class="depo__play" aria-hidden="true"><i data-i="play" data-w="fill"></i></span>
+          <span class="depo__texto"><span class="depo__frase">“Vale a pena pra quem quer se aprofundar.”</span><strong>Pedro Henrique</strong><span class="depo__local">Agricultura de precisão</span></span>
+        </button>
+      </li>
+      <li class="depo" data-revela="grade" style="--i:2">
+        <button class="depo__botao" type="button" data-video="/assets/depoimentos/depoimento-3.mp4" aria-label="Assistir o depoimento de Bruno">
+          <img class="depo__capa" src="/assets/depoimentos/depoimento-3.webp" alt="" width="540" height="960" loading="lazy" decoding="async">
+          <span class="depo__play" aria-hidden="true"><i data-i="play" data-w="fill"></i></span>
+          <span class="depo__texto"><span class="depo__frase">“Vai me ajudar bastante daqui pra frente.”</span><strong>Bruno</strong><span class="depo__local">Ribeirão Preto, SP</span></span>
+        </button>
+      </li>
+      <li class="depo" data-revela="grade" style="--i:3">
+        <button class="depo__botao" type="button" data-video="/assets/depoimentos/depoimento-4.mp4" aria-label="Assistir o depoimento de Sérgio">
+          <img class="depo__capa" src="/assets/depoimentos/depoimento-4.webp" alt="" width="540" height="960" loading="lazy" decoding="async">
+          <span class="depo__play" aria-hidden="true"><i data-i="play" data-w="fill"></i></span>
+          <span class="depo__texto"><span class="depo__frase">“Saio com uma caixa de ferramenta bem atualizada.”</span><strong>Sérgio</strong><span class="depo__local">Mato Grosso</span></span>
+        </button>
+      </li>
+      <li class="depo" data-revela="grade" style="--i:4">
+        <button class="depo__botao" type="button" data-video="/assets/depoimentos/depoimento-5.mp4" aria-label="Assistir o depoimento de Samuel Magalhães">
+          <img class="depo__capa" src="/assets/depoimentos/depoimento-5.webp" alt="" width="540" height="960" loading="lazy" decoding="async">
+          <span class="depo__play" aria-hidden="true"><i data-i="play" data-w="fill"></i></span>
+          <span class="depo__texto"><span class="depo__frase">“Explica de um jeito leve de entender.”</span><strong>Samuel Magalhães</strong><span class="depo__local">Goiás</span></span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>

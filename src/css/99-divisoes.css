@@ -7,7 +7,7 @@
 @media (max-width: 47.99em) { :root { --divisao: 1.75rem; --pad: 3.5rem; } }
 
 .secao { padding-block: var(--pad) calc(var(--pad) + var(--divisao)); }
-.prova, .treino, .sobre, .dominar, .programa, .turma, .invest, .duvidas, .perguntas, .inscricao, .rodape {
+.prova, .treino, .sobre, .dominar, .programa, .turma, .depoimentos, .invest, .duvidas, .perguntas, .inscricao, .rodape {
   position: relative;
   margin-top: calc(var(--divisao) * -1);
   border-radius: var(--divisao) var(--divisao) 0 0;
@@ -19,6 +19,7 @@
 .dominar { z-index: 4; }
 .programa { z-index: 5; }
 .turma { z-index: 6; }
+.depoimentos { z-index: 6; } /* entrou depois da turma em 2026-11-19; mesma camada, vem depois no HTML */
 .invest { z-index: 7; }
 .duvidas { z-index: 8; }
 .inscricao { z-index: 9; }
