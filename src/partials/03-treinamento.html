@@ -25,19 +25,27 @@
       </div>
     </div>
 
-    <ul class="treino__cartoes trilho">
-      <li class="foto-cartao" data-revela="grade" style="--i:0">
-        <img data-img="cartao-osciloscopio" sizes="(max-width: 47.99em) 82vw, 30vw" alt="Técnico medindo o sinal de uma placa com as pontas de prova do osciloscópio" loading="lazy" decoding="async">
-        <h3>Diagnóstico com osciloscópio</h3>
-      </li>
-      <li class="foto-cartao" data-revela="grade" style="--i:1">
-        <img data-img="cartao-microscopio" sizes="(max-width: 47.99em) 82vw, 30vw" alt="Aluno reparando uma placa no microscópio, com a imagem ampliada no monitor" loading="lazy" decoding="async">
-        <h3>Reparo de placa no microscópio</h3>
-      </li>
-      <li class="foto-cartao" data-revela="grade" style="--i:2">
-        <img data-img="cartao-instrutor" sizes="(max-width: 47.99em) 82vw, 30vw" alt="Instrutor da Eletron Paulista acompanhando um aluno na bancada" loading="lazy" decoding="async">
-        <h3>Instrutor do lado em cada posto</h3>
-      </li>
-    </ul>
+    <!-- fita passando sem parar (pedido do Felipe, 2026-11-19): cada grupo tem as 3 fotos duas
+         vezes pra cobrir a tela larga; o 2º grupo é a emenda. As cópias ficam fora do leitor de tela. -->
+    <div class="treino__fita" data-revela style="--atraso:.1s">
+      <div class="treino__trilho">
+        <ul class="treino__grupo">
+          <li class="foto-cartao"><img data-img="cartao-osciloscopio" sizes="(max-width: 47.99em) 64vw, 26rem" alt="Técnico medindo o sinal de uma placa com as pontas de prova do osciloscópio" loading="lazy" decoding="async"><h3>Diagnóstico com osciloscópio</h3></li>
+          <li class="foto-cartao"><img data-img="cartao-microscopio" sizes="(max-width: 47.99em) 64vw, 26rem" alt="Aluno reparando uma placa no microscópio, com a imagem ampliada no monitor" loading="lazy" decoding="async"><h3>Reparo de placa no microscópio</h3></li>
+          <li class="foto-cartao"><img data-img="cartao-instrutor" sizes="(max-width: 47.99em) 64vw, 26rem" alt="Instrutor da Eletron Paulista acompanhando um aluno na bancada" loading="lazy" decoding="async"><h3>Instrutor do lado em cada posto</h3></li>
+          <li class="foto-cartao" aria-hidden="true"><img data-img="cartao-osciloscopio" sizes="(max-width: 47.99em) 64vw, 26rem" alt="" loading="lazy" decoding="async"><h3>Diagnóstico com osciloscópio</h3></li>
+          <li class="foto-cartao" aria-hidden="true"><img data-img="cartao-microscopio" sizes="(max-width: 47.99em) 64vw, 26rem" alt="" loading="lazy" decoding="async"><h3>Reparo de placa no microscópio</h3></li>
+          <li class="foto-cartao" aria-hidden="true"><img data-img="cartao-instrutor" sizes="(max-width: 47.99em) 64vw, 26rem" alt="" loading="lazy" decoding="async"><h3>Instrutor do lado em cada posto</h3></li>
+        </ul>
+        <ul class="treino__grupo" aria-hidden="true">
+          <li class="foto-cartao" aria-hidden="true"><img data-img="cartao-osciloscopio" sizes="(max-width: 47.99em) 64vw, 26rem" alt="" loading="lazy" decoding="async"><h3>Diagnóstico com osciloscópio</h3></li>
+          <li class="foto-cartao" aria-hidden="true"><img data-img="cartao-microscopio" sizes="(max-width: 47.99em) 64vw, 26rem" alt="" loading="lazy" decoding="async"><h3>Reparo de placa no microscópio</h3></li>
+          <li class="foto-cartao" aria-hidden="true"><img data-img="cartao-instrutor" sizes="(max-width: 47.99em) 64vw, 26rem" alt="" loading="lazy" decoding="async"><h3>Instrutor do lado em cada posto</h3></li>
+          <li class="foto-cartao" aria-hidden="true"><img data-img="cartao-osciloscopio" sizes="(max-width: 47.99em) 64vw, 26rem" alt="" loading="lazy" decoding="async"><h3>Diagnóstico com osciloscópio</h3></li>
+          <li class="foto-cartao" aria-hidden="true"><img data-img="cartao-microscopio" sizes="(max-width: 47.99em) 64vw, 26rem" alt="" loading="lazy" decoding="async"><h3>Reparo de placa no microscópio</h3></li>
+          <li class="foto-cartao" aria-hidden="true"><img data-img="cartao-instrutor" sizes="(max-width: 47.99em) 64vw, 26rem" alt="" loading="lazy" decoding="async"><h3>Instrutor do lado em cada posto</h3></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

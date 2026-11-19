@@ -1,9 +1,12 @@
 /* ---------------------------------------------------------------- 02 · faixa de prova
    Logo abaixo do hero, branca, subindo por cima do vídeo com os cantos arredondados (99-divisoes).
-   Cinco números em linha, separados por fio, e a linha das marcas em texto (sem logo de fabricante). */
+   Cinco números em linha, cada um com um ícone em círculo verde que se mexe do seu jeito
+   (trator andando, medalha balançando, ampulheta virando, chave apertando, turma pulsando) e
+   um anel de luz saindo. Só transform e opacity, e só depois que o item aparece (.visivel).
+   A lista de marcas em texto saiu em 2026-11-19 a pedido do Felipe (os logos passam no 05). */
 .prova { background: var(--branco); padding-block: clamp(3rem, 5vw, 4.5rem); }
 .prova__numeros { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.prova__numeros li { display: grid; gap: .5rem; padding-inline: clamp(.75rem, 2vw, 2rem); text-align: center; }
+.prova__numeros li { display: grid; justify-items: center; gap: .5rem; padding-inline: clamp(.75rem, 2vw, 2rem); text-align: center; }
 .prova__numeros li + li { border-left: 1px solid rgb(20 17 16 / .1); }
 .prova__numeros strong {
   font: 600 clamp(1.625rem, 1rem + 1.6vw, 2.5rem)/1 var(--fonte-titulo);
@@ -13,20 +16,63 @@
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
-.prova__numeros li > span { font-size: .9375rem; color: var(--cinza); }
-.prova__marcas { margin-top: clamp(2.25rem, 4vw, 3rem); padding-top: clamp(1.75rem, 3vw, 2.25rem); border-top: 1px solid rgb(20 17 16 / .08); text-align: center; }
-.prova__lista { font: 600 clamp(.9375rem, .85rem + .3vw, 1.125rem)/1.6 var(--fonte-titulo); font-stretch: 108%; color: var(--preto); letter-spacing: .01em; }
-.prova__lista span { color: var(--amarelo); margin-inline: .5rem; font-weight: 800; }
-.prova__legenda { margin-top: .625rem; font-size: .9375rem; color: var(--cinza); }
+.prova__numeros li > span:last-child { font-size: .9375rem; color: var(--cinza); }
+
+.prova__icone {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: clamp(3.25rem, 2.6rem + 1.4vw, 4rem);
+  height: clamp(3.25rem, 2.6rem + 1.4vw, 4rem);
+  margin-bottom: .5rem;
+  border-radius: 50%;
+  color: var(--verde);
+  background: var(--verde-claro);
+}
+.prova__icone .i { width: 55%; height: 55%; }
+.prova__icone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--verde);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .prova__item.visivel .prova__icone::after { animation: prova-anel 3.2s var(--ease) infinite; animation-delay: calc(var(--i, 0) * .45s + .6s); }
+  .prova__item.visivel .prova__icone .i { animation: var(--mov) var(--dur-mov, 2.8s) var(--ease-in-out) infinite; animation-delay: calc(var(--i, 0) * .3s); }
+  .prova__item--trator { --mov: prova-trator; --dur-mov: 1.6s; }
+  .prova__item--medalha { --mov: prova-medalha; --dur-mov: 2.6s; }
+  .prova__item--ampulheta { --mov: prova-ampulheta; --dur-mov: 3.6s; }
+  .prova__item--chave { --mov: prova-chave; --dur-mov: 2.2s; }
+  .prova__item--turma { --mov: prova-turma; --dur-mov: 2.4s; }
+  .prova__item--medalha .i { transform-origin: 50% 12%; }
+  .prova__item--chave .i { transform-origin: 30% 70%; }
+}
+@keyframes prova-anel { 0% { transform: scale(1); opacity: .45; } 70%, 100% { transform: scale(1.55); opacity: 0; } }
+@keyframes prova-trator {
+  0%, 100% { transform: translate3d(-3px, 0, 0) rotate(0); }
+  25% { transform: translate3d(0, -1.5px, 0) rotate(-3deg); }
+  50% { transform: translate3d(3px, 0, 0) rotate(0); }
+  75% { transform: translate3d(0, -1px, 0) rotate(2deg); }
+}
+@keyframes prova-medalha { 0%, 100% { transform: rotate(-10deg); } 50% { transform: rotate(10deg); } }
+@keyframes prova-ampulheta { 0%, 35% { transform: rotate(0); } 50%, 85% { transform: rotate(180deg); } 100% { transform: rotate(360deg); } }
+@keyframes prova-chave { 0%, 100% { transform: rotate(0); } 30% { transform: rotate(-24deg); } 45% { transform: rotate(-18deg); } 60% { transform: rotate(-24deg); } }
+@keyframes prova-turma { 0%, 100% { transform: scale(1); } 40% { transform: scale(1.14); } 60% { transform: scale(.97); } }
 
 @media (max-width: 59.99em) {
-  .prova__numeros { grid-template-columns: repeat(6, minmax(0, 1fr)); row-gap: 2rem; }
+  .prova__numeros { grid-template-columns: repeat(6, minmax(0, 1fr)); row-gap: 2.25rem; }
   .prova__numeros li { grid-column: span 2; }
   .prova__numeros li:nth-child(4) { grid-column: 2 / span 2; }
   .prova__numeros li + li { border-left: 0; }
 }
 @media (max-width: 29.99em) {
-  .prova__numeros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .prova__numeros li, .prova__numeros li:nth-child(4) { grid-column: auto; }
+  .prova__numeros { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.75rem; }
+  .prova__numeros li, .prova__numeros li:nth-child(4) { grid-column: auto; gap: .375rem; padding-inline: .5rem; }
   .prova__numeros li:last-child { grid-column: 1 / -1; }
+  .prova__numeros li > span:last-child { font-size: .875rem; }
+  .prova__icone { margin-bottom: .25rem; }
 }

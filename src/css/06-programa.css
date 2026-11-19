@@ -148,8 +148,20 @@
   .programa__titulo br { display: none; }
   .programa__horario { gap: .875rem; }
   .programa__horario .i { width: 2.25rem; height: 2.25rem; }
-  .trilho.dias > * { flex-basis: 76%; }
-  .dia__link { --foto: 15rem; }
+  /* sempre 2 por linha, na vertical (pedido do Felipe, 2026-11-19); o 5º fica no meio */
+  .dias { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .625rem; }
+  .dia { grid-column: span 2; }
+  .dia:nth-child(4) { grid-column: span 2; }
+  .dia:nth-child(5) { grid-column: 2 / span 2; }
+  .dia__link { --foto: 9.5rem; padding: .875rem; border-radius: 1.125rem; }
+  .dia__link::before { left: .875rem; height: 3px; }
+  .dia__corpo { margin-top: calc(var(--foto) - 3rem); }
+  .dia__seta { top: .625rem; right: .625rem; width: 2.125rem; height: 2.125rem; border-radius: .625rem; }
+  .dia__seta .i { width: 1rem; height: 1rem; }
+  .dia__num { font-size: 2.125rem; }
+  .dia__rotulo { margin-top: .375rem; font-size: .6875rem; letter-spacing: .16em; }
+  .dia h3 { font-size: 1rem; font-stretch: 100%; hyphens: auto; }
+  .dia p { margin-top: .375rem; font-size: .8125rem; line-height: 1.4; }
   .programa__faixa { flex-direction: column; align-items: stretch; text-align: left; }
   .programa__timer { padding: 0 0 1rem; border-right: 0; border-bottom: 1px solid rgb(46 224 126 / .45); }
   .programa__faixa .botao { width: 100%; }

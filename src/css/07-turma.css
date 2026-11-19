@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------- 07 · a turma
-   Branca. 4 fotos em retrato lado a lado (no celular, trilho de arrastar). */
+   Branca. 4 fotos em retrato lado a lado (no celular, 2 por linha). */
 .turma { background: var(--branco); }
 .turma__fotos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(.875rem, 1.4vw, 1.25rem); }
 .turma__fotos .foto-cartao:nth-child(even) { translate: 0 2.5rem; }
@@ -7,6 +7,8 @@
   .turma__fotos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .turma__fotos .foto-cartao:nth-child(even) { translate: none; }
 }
+/* celular: 2 por linha, na vertical (pedido do Felipe, 2026-11-19) */
 @media (max-width: 47.99em) {
-  .turma__fotos > * { flex-basis: 68%; }
+  .turma__fotos { gap: .625rem; }
+  .turma__fotos .foto-cartao h3 { left: .875rem; right: .875rem; bottom: .75rem; font-size: .9375rem; }
 }

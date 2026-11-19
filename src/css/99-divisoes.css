@@ -21,8 +21,8 @@
 .turma { z-index: 6; }
 .invest { z-index: 7; }
 .duvidas { z-index: 8; }
-.perguntas { z-index: 9; overflow: visible; }
-.inscricao { z-index: 10; }
+.inscricao { z-index: 9; }
+.perguntas { z-index: 10; overflow: visible; } /* FAQ desceu pra depois do formulário em 2026-11-19 */
 .rodape { z-index: 11; }
 
 .hero { padding-bottom: calc(6rem + var(--divisao)); }

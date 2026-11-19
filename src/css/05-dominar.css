@@ -37,16 +37,19 @@
 @media (max-width: 63.99em) {
   .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+/* celular: sempre 2 por linha (pedido do Felipe, 2026-11-19: nada de 1 cartão por vez).
+   Os 2 cartões grandes viram meia largura, com o equipamento embaixo do texto. */
 @media (max-width: 47.99em) {
-  .bento__item--grande { flex-direction: column; align-items: stretch; min-height: 0; padding-bottom: 0; }
-  .bento__texto { max-width: none; }
-  .bento__img { position: relative; right: auto; bottom: auto; align-self: center; margin: 1rem 0 1.5rem; }
-  .bento__img--monitor { width: 64%; }
-  .bento__img--receptor { width: 54%; }
-  .bento__item:not(.bento__item--grande) { min-height: 12rem; padding: 1.25rem; }
-  .bento__item:not(.bento__item--grande) p { font-size: .875rem; }
-  .bento__item:not(.bento__item--grande) h3 { font-size: 1rem; font-stretch: 100%; hyphens: auto; }
-  .bento__icone { width: 2rem; height: 2rem; margin-bottom: 1.5rem; }
+  .bento { gap: .625rem; }
+  .bento__item { min-height: 0; padding: 1rem; gap: .5rem; }
+  .bento__item--grande { grid-column: auto; flex-direction: column; align-items: stretch; padding-bottom: 0; }
+  .bento__texto { max-width: none; gap: .5rem; padding-top: 0; }
+  .bento__img { position: relative; right: auto; bottom: auto; align-self: center; margin: auto 0 .75rem; }
+  .bento__img--monitor { width: 92%; }
+  .bento__img--receptor { width: 72%; }
+  .bento__item h3, .bento__item--grande h3 { font-size: 1rem; font-stretch: 100%; hyphens: auto; }
+  .bento__item p { font-size: .8125rem; line-height: 1.45; }
+  .bento__icone { width: 1.875rem; height: 1.875rem; margin-bottom: .75rem; }
 }
 
 /* faixa de marcas passando (como no site antigo), com os logos oficiais (os do site antigo
