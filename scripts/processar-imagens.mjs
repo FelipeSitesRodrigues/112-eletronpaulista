@@ -83,6 +83,8 @@ const FOTOS = `${R}/Recursos Site/FOTOS CURSO`
 
 // 03 · treinamento: os 3 equipamentos recortados (flutuam) e as 3 fotos dos cartões (4:3)
 for (const n of ['monitor', 'receptor', 'modulo']) await variantes(`scripts/.cache/equipamentos/${n}.png`, `equip-${n}`, [360, 560], { formatos: ['webp'], q: 86 })
+// aparelhos reais do laboratório (scripts/recortar-equipamentos-reais.py), 2026-11-23
+await variantes('scripts/.cache/equipamentos/siglent.png', 'equip-siglent', [320, 480], { formatos: ['webp'], q: 86 })
 await variantes(`${FIM}/cartao-1-osciloscopio.png`, 'cartao-osciloscopio', [480, 800], { q: 80 })
 await variantes(`${FIM}/cartao-2-microscopio.png`, 'cartao-microscopio', [480, 800], { q: 80 })
 await variantes(`${FIM}/cartao-3-instrutor-com-aluno.png`, 'cartao-instrutor', [480, 800], { q: 80 })

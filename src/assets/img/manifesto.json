@@ -123,6 +123,16 @@
   "h": 340,
   "kb": 30
  },
+ "equip-siglent-320.webp": {
+  "w": 320,
+  "h": 231,
+  "kb": 20
+ },
+ "equip-siglent-480.webp": {
+  "w": 480,
+  "h": 346,
+  "kb": 36
+ },
  "cartao-osciloscopio-480.avif": {
   "w": 480,
   "h": 360,
@@ -186,22 +196,22 @@
  "programa-dia-1-360.avif": {
   "w": 360,
   "h": 330,
-  "kb": 13
+  "kb": 7
  },
  "programa-dia-1-360.webp": {
   "w": 360,
   "h": 330,
-  "kb": 17
+  "kb": 7
  },
  "programa-dia-1-640.avif": {
   "w": 640,
   "h": 587,
-  "kb": 25
+  "kb": 15
  },
  "programa-dia-1-640.webp": {
   "w": 640,
   "h": 587,
-  "kb": 31
+  "kb": 17
  },
  "programa-dia-2-360.avif": {
   "w": 360,

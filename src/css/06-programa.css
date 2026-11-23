@@ -73,7 +73,7 @@
 .dia picture { position: absolute; z-index: -2; inset: 0 0 auto; height: calc(var(--foto) + 2rem); }
 .dia__corpo { margin-top: calc(var(--foto) - 4.25rem); }
 .dia__foto { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 40%; transition: transform 1s var(--ease); }
-.dia__foto--1 { object-position: 30% 50%; }
+.dia__foto--1 { object-position: 50% 30%; } /* Siglent real no centro desde 2026-11-23 */
 .dia__foto--4 { object-position: 50% 30%; }
 .dia__seta {
   position: absolute;

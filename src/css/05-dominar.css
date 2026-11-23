@@ -19,6 +19,10 @@
 .bento__item p { font-size: .9688rem; line-height: 1.5; color: var(--cinza); max-width: 24rem; }
 .bento__icone { width: 2.5rem; height: 2.5rem; color: var(--verde); margin-bottom: 2.75rem; }
 @media (hover: hover) { .bento__item:hover { background: var(--verde-claro); } }
+/* cartão com o aparelho real do laboratório (osciloscópio Siglent, foto do dono refeita no
+   ChatGPT em fundo cinza e recortada por scripts/recortar-equipamentos-reais.py), no lugar do ícone */
+.bento__aparelho { width: 82%; max-width: 15rem; height: auto; margin: -.25rem 0 1rem; filter: drop-shadow(0 1rem 1.25rem rgb(20 17 16 / .25)); transition: transform 1s var(--ease); }
+@media (hover: hover) { .bento__item--aparelho:hover .bento__aparelho { transform: translate3d(0, -4px, 0) rotate(-1deg); } }
 
 .bento__item--grande {
   grid-column: span 2;
@@ -50,6 +54,7 @@
   .bento__item h3, .bento__item--grande h3 { font-size: 1rem; font-stretch: 100%; hyphens: auto; }
   .bento__item p { font-size: .8125rem; line-height: 1.45; }
   .bento__icone { width: 1.875rem; height: 1.875rem; margin-bottom: .75rem; }
+  .bento__aparelho { width: 100%; margin: 0 0 .5rem; }
 }
 
 /* faixa de marcas passando (como no site antigo), com os logos oficiais (os do site antigo
