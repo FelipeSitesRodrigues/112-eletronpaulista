@@ -22,9 +22,10 @@ SAI.mkdir(parents=True, exist_ok=True)
 
 # arquivo, (x0, x1) da faixa da cabeça, limite de baixo do recorte
 FOTOS = {
-    # foto v2 (2026-11-23): Sérgio sentado medindo a placa, foto real com a bancada aprovada atrás
-    'desktop': ('sobre-desktop.png', (670, 1030), 380),
-    'celular': ('sobre-celular.png', (330, 730), 600),
+    # v1 (braços cruzados), escolhida de novo pelo cliente em 2026-11-23. A v2 (sentado medindo
+    # a placa) usava (670, 1030), 380 e (330, 730), 600; arquivos guardados como sobre-*-v2.png
+    'desktop': ('sobre-desktop.png', (740, 1010), 338),
+    'celular': ('sobre-celular.png', (350, 680), 560),
 }
 
 for nome, (arq, (x0, x1), limite) in FOTOS.items():

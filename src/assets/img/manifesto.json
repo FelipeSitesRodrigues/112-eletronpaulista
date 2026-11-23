@@ -296,52 +296,52 @@
  "sobre-foto-960.avif": {
   "w": 960,
   "h": 640,
-  "kb": 43
+  "kb": 35
  },
  "sobre-foto-960.webp": {
   "w": 960,
   "h": 640,
-  "kb": 45
+  "kb": 37
  },
  "sobre-foto-1536.avif": {
   "w": 1536,
   "h": 1024,
-  "kb": 83
+  "kb": 66
  },
  "sobre-foto-1536.webp": {
   "w": 1536,
   "h": 1024,
-  "kb": 86
+  "kb": 71
  },
  "sobre-foto-movel-640.avif": {
   "w": 640,
   "h": 960,
-  "kb": 43
+  "kb": 34
  },
  "sobre-foto-movel-640.webp": {
   "w": 640,
   "h": 960,
-  "kb": 46
+  "kb": 35
  },
  "sobre-foto-movel-1024.avif": {
   "w": 1024,
   "h": 1536,
-  "kb": 85
+  "kb": 68
  },
  "sobre-foto-movel-1024.webp": {
   "w": 1024,
   "h": 1536,
-  "kb": 92
+  "kb": 70
  },
  "sobre-recorte-960.webp": {
   "w": 960,
   "h": 640,
-  "kb": 10
+  "kb": 8
  },
  "sobre-recorte-1536.webp": {
   "w": 1536,
   "h": 1024,
-  "kb": 25
+  "kb": 19
  },
  "sobre-recorte-movel-640.webp": {
   "w": 640,
@@ -351,7 +351,7 @@
  "sobre-recorte-movel-1024.webp": {
   "w": 1024,
   "h": 1536,
-  "kb": 29
+  "kb": 25
  },
  "turma-1-420.avif": {
   "w": 420,

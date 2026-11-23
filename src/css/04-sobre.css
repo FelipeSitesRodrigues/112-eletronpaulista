@@ -18,8 +18,6 @@
 .sobre__foto, .sobre__recorte, .sobre__foto img, .sobre__recorte img { position: absolute; inset: 0; width: 100%; height: 100%; }
 .sobre__foto img, .sobre__recorte img { object-fit: cover; }
 .sobre__recorte { z-index: 2; pointer-events: none; }
-/* pé da foto desmanchando no preto da seção, pra o título que encosta nele ler bem */
-.sobre__cena::after { content: ''; position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; height: 24%; background: linear-gradient(180deg, rgb(20 17 16 / 0), var(--preto)); pointer-events: none; }
 .sobre__pilula {
   position: absolute;
   z-index: 3;
@@ -63,9 +61,8 @@
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 2.5rem clamp(3rem, 8vw, 9rem);
   align-items: end;
-  /* foto v2 (2026-11-23): o pé da foto é a mesa com mãos e multímetro, não mais a camisa
-     escura; o texto só encosta no degradê do pé em vez de subir por cima da foto */
-  margin-top: max(-5vw, -5rem);
+  margin-top: -27cqw;
+  margin-top: max(-27vw, -24rem);
   padding-bottom: clamp(3.5rem, 6vw, 5rem);
 }
 .sobre__titulo { font-size: clamp(2.25rem, 1.2rem + 3vw, 3.75rem); }
@@ -93,13 +90,11 @@
 .sobre__pilares span { font-size: .9375rem; color: rgb(255 255 255 / .72); }
 
 @media (max-width: 59.99em) {
-  .sobre__caixa { grid-template-columns: minmax(0, 1fr); margin-top: -6vw; }
+  .sobre__caixa { grid-template-columns: minmax(0, 1fr); margin-top: max(-14vw, -9rem); }
 }
 @media (max-width: 47.99em) {
   .sobre__cena { aspect-ratio: 2 / 3; }
   .sobre__pilula { top: 6%; font-size: .8125rem; }
-  .sobre__ano { top: 21.5%; font-size: 17.5cqw; }
-  /* foto v2 (2026-11-23): o pé da foto agora é a mesa com as mãos e o multímetro, então o
-     título só encosta na borda escura da mesa em vez de subir por cima das mãos */
-  .sobre__caixa { margin-top: -9vw; padding-bottom: 3rem; }
+  .sobre__ano { top: 19.5%; font-size: 17.5cqw; }
+  .sobre__caixa { margin-top: -28vw; padding-bottom: 3rem; }
 }
