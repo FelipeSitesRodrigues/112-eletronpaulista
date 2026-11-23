@@ -22,8 +22,9 @@ SAI.mkdir(parents=True, exist_ok=True)
 
 # arquivo, (x0, x1) da faixa da cabeça, limite de baixo do recorte
 FOTOS = {
-    'desktop': ('sobre-desktop.png', (740, 1010), 338),
-    'celular': ('sobre-celular.png', (350, 680), 560),
+    # foto v2 (2026-11-23): Sérgio sentado medindo a placa, foto real com a bancada aprovada atrás
+    'desktop': ('sobre-desktop.png', (670, 1030), 380),
+    'celular': ('sobre-celular.png', (330, 730), 600),
 }
 
 for nome, (arq, (x0, x1), limite) in FOTOS.items():
@@ -38,6 +39,11 @@ for nome, (arq, (x0, x1), limite) in FOTOS.items():
 
     nucleo = (d > 26) & faixa
     nucleo = ndi.binary_closing(nucleo, iterations=4)
+    # fecha a borda de baixo entre o 1º e o último pixel da cabeça: sem isso a haste escura dos
+    # óculos (v2, 2026-11-23) encosta no corte, não conta como furo e vira buraco no recorte
+    for y in range(limite - 6, limite):
+        xs_l = np.nonzero(nucleo[y])[0]
+        if xs_l.size: nucleo[y, xs_l.min():xs_l.max() + 1] = True
     nucleo = ndi.binary_fill_holes(nucleo)
     rot, n = ndi.label(nucleo)
     if n > 1:
