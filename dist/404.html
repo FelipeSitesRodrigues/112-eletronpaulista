@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Página não encontrada | Eletron Paulista</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#04301F">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/Archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- 404 da Eletron Paulista (2026-11-27). A Vercel serve o 404.html sozinha pra qualquer
+       endereço que não existe. Página solta: CSS aqui dentro, fontes e logo do site. -->
+  <style>
+    @font-face { font-family: 'Archivo'; font-weight: 100 900; font-stretch: 62% 125%; font-display: swap; src: url('/assets/fonts/Archivo-wdth.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-weight: 400 700; font-display: swap; src: url('/assets/fonts/Inter-latin-var.woff2') format('woff2'); }
+    :root { --verde: #0A6B41; --luz: #2EE07E; --amarelo: #F2D72B; --preto: #141110; --titulo: 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; --texto: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; }
+    html { color-scheme: dark; }
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      padding: clamp(1.25rem, 4vw, 2.5rem) clamp(1rem, 4.2vw, 4rem);
+      overflow-x: hidden;
+      color: #fff;
+      font: 400 1rem/1.55 var(--texto);
+      background:
+        radial-gradient(45% 55% at 78% 30%, rgb(46 224 126 / .2), rgb(46 224 126 / 0) 70%),
+        radial-gradient(50% 60% at 0% 100%, rgb(10 107 65 / .55), rgb(10 107 65 / 0) 70%),
+        linear-gradient(180deg, #05402A 0%, #04301F 55%, #032417 100%);
+    }
+    .logo img { display: block; width: clamp(9rem, 14vw, 12rem); height: auto; }
+    main { position: relative; display: grid; align-content: center; justify-items: start; gap: 1.25rem; width: min(100%, 72rem); padding-block: 3rem 4rem; }
+    .num {
+      font: 700 clamp(7rem, 4rem + 18vw, 16rem)/.85 var(--titulo);
+      font-stretch: 112%;
+      letter-spacing: -.04em;
+      color: transparent;
+      -webkit-text-stroke: 2px rgb(46 224 126 / .55);
+      user-select: none;
+    }
+    .num span { color: var(--amarelo); -webkit-text-stroke: 0; }
+    .rotulo { display: inline-flex; align-items: center; gap: .875rem; font-size: .875rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--amarelo); }
+    .rotulo::after { content: ''; width: 4.5rem; height: 2px; background: var(--amarelo); }
+    h1 { max-width: 14em; font: 600 clamp(2rem, 1.2rem + 3vw, 3.5rem)/1.05 var(--titulo); font-stretch: 106%; letter-spacing: -.01em; }
+    p { max-width: 34rem; font-size: clamp(1.0625rem, 1rem + .25vw, 1.1875rem); color: rgb(255 255 255 / .82); }
+    .botoes { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: .75rem; }
+    .botao { display: inline-flex; align-items: center; justify-content: center; gap: .625rem; min-height: 3.5rem; padding: .875rem 1.75rem; border-radius: 999px; font: 600 1.0625rem/1 var(--titulo); text-decoration: none; transition: transform .25s cubic-bezier(.22, 1, .36, 1), background-color .25s, border-color .25s; }
+    .botao svg { width: 1.25rem; height: 1.25rem; flex: none; }
+    .botao--amarelo { color: var(--preto); background: var(--amarelo); box-shadow: 0 0 2rem -.25rem rgb(242 215 43 / .45); }
+    .botao--vidro { color: #fff; background: rgb(46 224 126 / .08); border: 1.5px solid rgb(46 224 126 / .55); }
+    .botao--vidro svg { color: var(--luz); }
+    .botao:focus-visible { outline: 2px solid var(--amarelo); outline-offset: 3px; }
+    @media (hover: hover) {
+      .botao:hover { transform: translate3d(0, -2px, 0); }
+      .botao--vidro:hover { border-color: var(--luz); background: rgb(46 224 126 / .14); }
+    }
+    .curva { position: fixed; left: 0; right: 0; bottom: 0; width: 100%; height: clamp(5rem, 11vw, 9rem); pointer-events: none; }
+    .curva path { fill: none; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+    @media (max-width: 29.99em) { .botoes, .botao { width: 100%; } }
+    @media (prefers-reduced-motion: reduce) { .botao { transition: none; } }
+  </style>
+</head>
+<body>
+  <a class="logo" href="/" aria-label="Eletron Paulista, ir para o início"><img src="/assets/img/logo-branca-480.webp" alt="Eletron Paulista" width="480" height="93"></a>
+
+  <main>
+    <p class="num" aria-hidden="true">4<span>0</span>4</p>
+    <span class="rotulo">Erro 404</span>
+    <h1>Essa página não existe ou mudou de endereço.</h1>
+    <p>Pode ser um link antigo ou digitado errado. Volte pro início pra conhecer o treinamento ou fale direto com a equipe.</p>
+    <div class="botoes">
+      <a class="botao botao--amarelo" href="/">Voltar ao início<svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="m224.49 136.49-72 72a12 12 0 0 1-17-17L187 140H40a12 12 0 0 1 0-24h147l-51.49-51.51a12 12 0 0 1 17-17l72 72a12 12 0 0 1-.02 17"/></svg></a>
+      <a class="botao botao--vidro" href="https://wa.me/5577999393230?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20treinamento%20de%20eletr%C3%B4nica%20embarcada." target="_blank" rel="noopener"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="m187.58 144.84-32-16a8 8 0 0 0-8 .5l-14.69 9.8a40.55 40.55 0 0 1-16-16l9.8-14.69a8 8 0 0 0 .5-8l-16-32A8 8 0 0 0 104 64a40 40 0 0 0-40 40 88.1 88.1 0 0 0 88 88 40 40 0 0 0 40-40 8 8 0 0 0-4.42-7.16M152 176a72.08 72.08 0 0 1-72-72 24 24 0 0 1 19.29-23.54l11.48 23L101 118a8 8 0 0 0-.73 7.51 56.47 56.47 0 0 0 30.15 30.15A8 8 0 0 0 138 155l14.61-9.74 23 11.48A24 24 0 0 1 152 176M128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24m0 192a87.87 87.87 0 0 1-44.06-11.81 8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216"/></svg>Falar no WhatsApp</a>
+    </div>
+  </main>
+
+  <svg class="curva" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="c404" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#2EE07E" stop-opacity="0"/>
+        <stop offset=".3" stop-color="#2EE07E" stop-opacity=".85"/>
+        <stop offset=".7" stop-color="#2EE07E" stop-opacity=".3"/>
+        <stop offset=".9" stop-color="#F2D72B" stop-opacity=".8"/>
+        <stop offset="1" stop-color="#F2D72B" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="M0 120 C 320 40, 640 50, 920 115 S 1300 135, 1440 50" stroke="url(#c404)" stroke-width="3"/>
+  </svg>
+</body>
+</html>

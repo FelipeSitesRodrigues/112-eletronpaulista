@@ -327,6 +327,8 @@ if (!argPreview) {
   gravar(path.join(DIST, 'robots.txt'), cfg.indexar ? `User-agent: *\nAllow: /\nDisallow: /preview/\n${base ? `Sitemap: ${base}/sitemap.xml\n` : ''}` : 'User-agent: *\nDisallow: /\n')
   if (base && cfg.indexar) gravar(path.join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${base}/</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod></url>\n</urlset>\n`)
   if (!base) avisos.push('dominio vazio no site.config.json: sem canonical e og:image relativo')
+  // 404 própria (2026-11-27): página solta em src/404.html, a Vercel serve sozinha pra endereço que não existe
+  if (existsSync(P('src/404.html'))) gravar(path.join(DIST, '404.html'), readFileSync(P('src/404.html'), 'utf8').replace(/\{\{cfg\.([\w.]+)\}\}/g, (_, c) => esc(valor(c))))
   if (process.argv.includes('--publicar')) rmSync(path.join(DIST, 'preview'), { recursive: true, force: true })
   console.log(`ok dist/index.html ${kb(html)} (${usados.size} ícones no sprite)`)
 } else {
