@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /preview/
+Sitemap: https://eletronpaulista.com.br/sitemap.xml

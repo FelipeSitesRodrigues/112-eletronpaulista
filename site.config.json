@@ -1,6 +1,6 @@
 {
-  "dominio": "",
-  "indexar": false,
+  "dominio": "https://eletronpaulista.com.br",
+  "indexar": true,
   "nome": "Eletron Paulista",
   "credito": "https://www.instagram.com/prorecprodutora/",
   "links": {
